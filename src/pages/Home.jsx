@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsData } from "../store/productsActions";
 import { useEffect } from "react";
+import SliderBanner from "../components/SliderBanner";
 
 const Home = () => {
   const isFetched = useSelector((state) => state.products.isFetched);
@@ -12,7 +13,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-full bg-primary"></div>
+      <div className=" bg-primary h-screen w-screen overflow-x-hidden">
+        <SliderBanner products={products} />
+      </div>
     </>
   );
 };

@@ -4,7 +4,7 @@ import CartIcon from "./CartIcon";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-screen h-10 sm:h-12 bg-primary space-x-5 fixed ">
+    <div className="w-screen h-10 sm:h-12 bg-primary space-x-5 fixed z-50">
       <div className="text-sm md:text-base hidden sm:w-1/6 sm:h-full sm:flex items-center justify-center text-sky-400 float-right text-center ">
         به فروشگاه سمین رای خوش آمدید
       </div>
