@@ -5,6 +5,9 @@ export default {
     extend: {
       colors: { primary: "#252422", secondary: "#ccc5b9", tertiary: "#eb5e28" },
     },
+    fontFamily: {
+      irsans: ["IranianSans"],
+    },
   },
   plugins: [],
 };
