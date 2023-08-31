@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 const CartIcon = ({ onClick }) => {
   const total = useSelector((state) => state.shoppingCart.total);
 
-  console.log(total);
   return (
     <>
       <div

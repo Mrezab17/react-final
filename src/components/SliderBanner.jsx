@@ -13,8 +13,6 @@ const SliderBanner = ({ products }) => {
     return { url: products[item].image };
   });
 
-  console.log(slides);
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
