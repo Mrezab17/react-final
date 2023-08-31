@@ -10,9 +10,12 @@ const persistConfig = {
 };
 
 import productsReducer from "./productsSlice";
+import cartReducer from "./cartSlice";
 const rootReducer = combineReducers({
   products: productsReducer,
+  shoppingCart: cartReducer,
 });
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
