@@ -14,31 +14,11 @@ const Home = () => {
     if (!isFetched) dispatch(fetchProductsData());
   }, [dispatch, isFetched]);
 
-  //set columns for table
-  const columns = [
-    {
-      Header: "نام",
-      accessor: "name",
-    },
-    {
-      Header: "دسته",
-      accessor: "category",
-    },
-    {
-      Header: "قیمت",
-      accessor: "price",
-    },
-    {
-      Header: "تعداد بازدید",
-      accessor: "view",
-    },
-  ];
-
   return (
     <>
       <div className=" bg-primary h-screen w-screen overflow-x-hidden">
         <SliderBanner products={products} />
-        <ProductsTable columns={columns} products={products} />
+        <ProductsTable products={products} />
       </div>
     </>
   );

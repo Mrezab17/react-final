@@ -9,8 +9,10 @@ const cartSlice = createSlice({
   reducers: {
     addToCart(state, action) {
       const newItem = action.payload;
+      //state.items = [];
       const existingItem = state.items.find((item) => item.id === newItem.id);
 
+      console.log(existingItem);
       if (!existingItem) {
         state.items.push({ ...newItem, count: 1 });
       } else {
@@ -24,17 +26,19 @@ const cartSlice = createSlice({
     },
     removeFromCart(state, action) {
       const id = action.payload;
+      console.log("At Remove : ");
 
       state.items = state.items.map((item) =>
-        item.id === id ? { count: item.count - 1, price: item.price } : item
+        item.id == id ? { ...item, count: item.count - 1 } : item
       );
 
-      state.items = state.items.map((item) => (item.count === 0 ? null : item));
+      state.items = state.items.filter((item) => item.count !== 0);
     },
     emptyCart(state) {
       state.items = [];
     },
     updateTotal(state) {
+      //
       let sum = 0;
       state.items.map((item) => {
         sum += item.count * item.price;
