@@ -4,8 +4,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { addToCart, updateTotal } from "../store/cartSlice";
-
-const ProductsTable = ({ products, columns }) => {
+const columns = [
+  {
+    Header: "نام",
+    accessor: "name",
+  },
+  {
+    Header: "دسته",
+    accessor: "category",
+  },
+  {
+    Header: "قیمت",
+    accessor: "price",
+  },
+  {
+    Header: "تعداد بازدید",
+    accessor: "view",
+  },
+];
+const ProductsTable = ({ products }) => {
   const dispatch = useDispatch();
   const data = products.map((product) => {
     return {
