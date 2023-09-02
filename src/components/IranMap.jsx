@@ -56,7 +56,6 @@ const IranMap = ({ checkoutSubmit }) => {
     let checkedValue = null;
     let inputElements = document.getElementsByClassName("cityCheckBox");
     for (let i = 0; inputElements[i]; ++i) {
-      console.log(inputElements[i].checked);
       if (inputElements[i].checked) {
         checkedValue = inputElements[i].value;
         break;

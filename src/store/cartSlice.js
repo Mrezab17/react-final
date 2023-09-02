@@ -12,7 +12,6 @@ const cartSlice = createSlice({
       //state.items = [];
       const existingItem = state.items.find((item) => item.id === newItem.id);
 
-      console.log(existingItem);
       if (!existingItem) {
         state.items.push({ ...newItem, count: 1 });
       } else {
@@ -26,7 +25,6 @@ const cartSlice = createSlice({
     },
     removeFromCart(state, action) {
       const id = action.payload;
-      console.log("At Remove : ");
 
       state.items = state.items.map((item) =>
         item.id == id ? { ...item, count: item.count - 1 } : item

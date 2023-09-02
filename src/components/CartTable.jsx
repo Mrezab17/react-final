@@ -35,7 +35,6 @@ const CartTable = ({ cart }) => {
       count: item.count,
     };
   });
-  console.log(data);
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({

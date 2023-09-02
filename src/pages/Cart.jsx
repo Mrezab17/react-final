@@ -4,7 +4,6 @@ import EmptyCart from "../components/EmpyCart";
 
 const Cart = () => {
   const cart = useSelector((state) => state.shoppingCart.items);
-  console.log(cart.length > 0);
   return (
     <>
       <div className=" bg-primary h-screen w-screen overflow-x-hidden">
